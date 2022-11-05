@@ -1,0 +1,61 @@
+:root {
+    --bg: #060F13FF;
+    --main-clr: #F9FAFAFF;
+    --title-clr: #B3A6F2FF;
+}
+
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+}
+
+:root:has(.theme > [value="light"]:checked) {
+    --bg: #E9EBEDFF;
+    --main-clr: #0D1E26FF;
+    --title-clr: #331AB3FF;
+}
+
+body {
+    font-family: system-ui;
+    font-size: 1.5rem;
+    background: var(--bg);
+    color: var(--main-clr);
+    transition: all 0.5s ease;
+}
+
+.container {
+    max-width: 700px;
+    padding: 2rem;
+}
+
+select {
+    /* reset styles*/
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+.theme {
+    max-width: 6em;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+.title {
+    color: var(--title-clr);
+    font-weight: 600;
+    font-size: 2rem;
+}
